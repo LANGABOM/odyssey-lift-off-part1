@@ -2,12 +2,16 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { colors, mq } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
+ import { useQuery } from '@apollo/client';
+
+
 
 /**
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
 const TrackCard = ({ track }) => {
+  
   const { title, thumbnail, author, length, modulesCount } = track;
 
   return (
